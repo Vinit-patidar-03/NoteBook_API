@@ -1,12 +1,12 @@
 const connectToMongo= require('./db');
 const express = require('express')
-// const cors = require('cors');
+const cors = require('cors');
 require('dotenv').config({path: './.env'});
 
 //Initializing Express app
 const app = express()
 //CORS ensures that we are sending the right headers.
-// app.use(cors());
+app.use(cors());
 
 const bodyParser = require("body-parser"); 
 app.use(bodyParser.json());
