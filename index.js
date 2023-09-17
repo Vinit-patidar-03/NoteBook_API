@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 //Connecting to MongoDB
 connectToMongo();
 
-//Initializing Apis
+// Initializing Apis
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
 // })

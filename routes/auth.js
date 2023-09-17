@@ -16,7 +16,8 @@ const jwt = require('jsonwebtoken');
 const fetchUser=require('../middleware/fetchUser')
 
 //Secret Key for JWT
-const jwt_secret=process.env.SECRET_KEY || "Hello! How are You?";
+const jwt_secret=process.env.SECRET_KEY;
+
 
 //Route 1:create a user using Post: '/api/auth/createUser' No login required
 router.post('/createUser',[body('name','Enter a valid name').isLength({min:3}),body('email',"Enter a Valid Email").isEmail(),body('passward').isLength({min:4})],
